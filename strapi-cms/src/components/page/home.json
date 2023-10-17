@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_homes",
+  "info": {
+    "displayName": "Home",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

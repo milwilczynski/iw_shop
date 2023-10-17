@@ -1,0 +1,6 @@
+﻿@use "src/styles/variables.scss" as *;
+
+.main-container {
+  @apply flex w-full h-full;
+  background-color: $primaryWhite;
+}
