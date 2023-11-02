@@ -9,40 +9,53 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
-  },
+  theme: {},
   plugins: [
     nextui({
       themes: {
-        'purple-dark': {
-          extend: 'dark', // <- inherit default values from dark theme
+        'light-purple': {
+          extend: 'light', // <- inherit default values from dark theme
           colors: {
-            background: '#0D001A',
-            foreground: '#ffffff',
+            background: '#FFF',
+            foreground: '#964EA6',
             primary: {
-              50: '#3B096C',
-              100: '#520F83',
-              200: '#7318A2',
-              300: '#9823C2',
-              400: '#c031e2',
-              500: '#DD62ED',
-              600: '#F182F6',
-              700: '#FCADF9',
-              800: '#FDD5F9',
-              900: '#FEECFE',
-              DEFAULT: '#DD62ED',
-              foreground: '#ffffff',
+              50: '#FADFF7',
+              100: '#FADFF7',
+              200: '#F6C1F3',
+              300: '#E29BE4',
+              400: '#C179C9',
+              500: '#964EA6',
+              600: '#78398E',
+              700: '#5C2777',
+              800: '#431860',
+              900: '#300E4F',
+              DEFAULT: '#ff9191',
+              foreground: '#964EA6',
+            },
+            secondary: {
+              50: '#FAEFF0',
+              100: '#FAEFF0',
+              200: '#F6E0E4',
+              300: '#E6C7CF',
+              400: '#CEABB8',
+              500: '#AE8799',
+              600: '#95627F',
+              700: '#7D4469',
+              800: '#642B57',
+              900: '#53194B',
+              DEFAULT: '#a80359',
+              foreground: '#AE8799',
             },
             focus: '#F182F6',
           },
           layout: {
+            fontSize: {
+              tiny: '0.6rem',
+              small: '0.8rem',
+              medium: '1rem',
+              large: '1.2rem',
+            },
+            spacingUnit: 3,
             disabledOpacity: '0.3',
             radius: {
               small: '4px',

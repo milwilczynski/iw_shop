@@ -2,9 +2,10 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 import { Inter } from 'next/font/google';
-import './globals.css';
+import './globals.scss';
 import Providers from '@/src/providers';
 import Navigation from '@/src/components/Navigation';
+import CommonLayout from '@/src/components/Layouts/CommonLayout';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,10 +20,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="purple-dark">
+    <html lang="en" className="light-purple">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className={inter.className}>
-        <Navigation />
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navigation />
+          <CommonLayout>{children}</CommonLayout>
+        </Providers>
       </body>
     </html>
   );
