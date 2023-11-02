@@ -9,77 +9,33 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "plugins": [{
-      "name": "typescript-plugin-css-modules",
-      "options": {
-        "classnameTransform": "camelCase"
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
       }
-    }],
+    ],
     "paths": {
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@components": [
-        "src/components"
-      ],
-      "@public/*": [
-        "public/*"
-      ],
-      "@public": [
-        "public"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@styles": [
-        "src/styles"
-      ],
-      "@redux/*": [
-        "src/redux/*"
-      ],
-      "@redux": [
-        "src/redux"
-      ],
-      "@i18n": [
-        "./i18n"
-      ],
-      "@test/*": [
-        "test/*"
-      ],
-      "@test": [
-        "test"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
-      "@utils": [
-        "src/utils"
+      "@/src/*": [
+        "./src/*"
       ]
-    },
-    "incremental": true
+    }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.ts",
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
+    ".next/types/**/*.ts",
+    "./.eslintrc.js"
   ],
   "exclude": [
-    "node_modules",
-    ".prettierrc"
+    "node_modules"
   ]
 }
