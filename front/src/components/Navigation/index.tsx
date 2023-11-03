@@ -11,6 +11,7 @@ import {
   NavbarMenuToggle,
 } from '@nextui-org/react';
 import styles from './Navigation.module.scss';
+
 interface NavigationProps {}
 
 const Navigation: FC<PropsWithChildren<NavigationProps>> = () => {
@@ -29,11 +30,11 @@ const Navigation: FC<PropsWithChildren<NavigationProps>> = () => {
   ];
   return (
     <Navbar
-      isBlurred={true}
-      isBordered={true}
+      isBlurred
+      isBordered
       className={styles.navigation}
-      position={'sticky'}
-      maxWidth={'full'}
+      position="sticky"
+      maxWidth="full"
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent>

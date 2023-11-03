@@ -28,6 +28,14 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Nunito+Sans:opsz@6..12&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className={inter.className}>
         <Providers>
