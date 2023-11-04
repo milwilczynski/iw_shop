@@ -3,3 +3,5 @@ test
 __generated__
 tailwind.config.js
 .prettierrc
+next.config.js
+postcss.config.js

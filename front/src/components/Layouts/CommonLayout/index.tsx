@@ -9,7 +9,7 @@ const CommonLayout: FC<PropsWithChildren<CommonLayoutProps>> = ({
   children,
 }) => (
   <section>
-    <section className={styles.container}>
+    <section className={`${styles.container}`}>
       <div className={styles.content}>{children}</div>
     </section>
     <section className={styles.bg}>

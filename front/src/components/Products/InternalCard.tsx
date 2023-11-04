@@ -2,13 +2,20 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Card, CardBody, CardHeader } from '@nextui-org/card';
 import { Image, Progress } from '@nextui-org/react';
+import styles from './Products.module.scss';
 
 interface InternalCardProps {}
 
 const InternalCard: FC<PropsWithChildren<InternalCardProps>> = () => (
-  <Card isPressable isHoverable className="max-w-full p-10 pt-5" shadow="sm">
+  <Card
+    isPressable
+    isHoverable
+    className={`max-w-full p-10 pt-5 ${styles.glass}`}
+    shadow="sm"
+  >
     <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
       <Image
+        isZoomed
         alt="Card background"
         className="object-cover rounded-xl"
         src="https://nextui.org/images/hero-card-complete.jpeg"

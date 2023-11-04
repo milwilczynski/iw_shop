@@ -6,6 +6,7 @@ import './globals.scss';
 import Providers from '@/src/providers';
 import Navigation from '@/src/components/Navigation';
 import CommonLayout from '@/src/components/Layouts/CommonLayout';
+import Brand from '@/src/components/Sections/Brand';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -40,7 +41,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Navigation />
-          <CommonLayout>{children}</CommonLayout>
+          <CommonLayout>
+            <Brand />
+            {children}
+          </CommonLayout>
         </Providers>
       </body>
     </html>

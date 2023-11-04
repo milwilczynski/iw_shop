@@ -58,9 +58,9 @@ const config: Config = {
             spacingUnit: 3,
             disabledOpacity: '0.3',
             radius: {
-              small: '4px',
-              medium: '6px',
-              large: '8px',
+              small: '1rem',
+              medium: '1.5rem',
+              large: '2rem',
             },
             borderWidth: {
               small: '1px',
