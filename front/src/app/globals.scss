@@ -41,3 +41,32 @@ body {
   }
 }
 
+.swiper-slide {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+@include sm {
+  .swiper-slide {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+@include md {
+  .swiper-slide {
+    max-width: 50%;
+    min-width: 365px;
+  }
+}
+
+@include lg {
+  .swiper-slide {
+    max-width: 33% !important;
+    min-width: 365px;
+  }
+}
+
+
+
+

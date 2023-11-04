@@ -7,12 +7,7 @@ import styles from './Products.module.scss';
 interface InternalCardProps {}
 
 const InternalCard: FC<PropsWithChildren<InternalCardProps>> = () => (
-  <Card
-    isPressable
-    isHoverable
-    className={`max-w-full p-10 pt-5 ${styles.glass}`}
-    shadow="sm"
-  >
+  <Card isPressable isHoverable className={`${styles.glass}`} shadow="sm">
     <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
       <Image
         isZoomed
