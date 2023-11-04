@@ -6,10 +6,7 @@ import { Image, Progress } from '@nextui-org/react';
 interface InternalCardProps {}
 
 const InternalCard: FC<PropsWithChildren<InternalCardProps>> = () => (
-  <Card
-    className="glass border-none bg-background/60 dark:bg-default-100/50 max-w-full p-10 pt-5"
-    shadow="sm"
-  >
+  <Card isPressable isHoverable className="max-w-full p-10 pt-5" shadow="sm">
     <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
       <Image
         alt="Card background"
