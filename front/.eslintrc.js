@@ -19,5 +19,8 @@ module.exports = {
   rules: {
     'no-empty-pattern': 'off',
     'react/function-component-definition': 'off',
+    'react/require-default-props': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-array-index-key': 'warn',
   },
 };

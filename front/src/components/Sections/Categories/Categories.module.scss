@@ -1,0 +1,22 @@
+﻿.container {
+  @apply flex flex-col justify-center items-center w-full py-10 rounded-t-3xl mt-10;
+  @include glass;
+}
+
+.heading {
+  @apply text-white p-5 text-5xl font-bold
+}
+
+.categories-container {
+  @apply flex flex-row w-full p-5 pt-10 gap-6;
+
+  div {
+    @apply flex flex-1 bg-white text-primary-900 py-6 justify-center items-center rounded-3xl;
+    max-width: 100px;
+    height: 100px;
+
+    &:nth-child(1) {
+      @apply bg-primary-500;
+    }
+  }
+}

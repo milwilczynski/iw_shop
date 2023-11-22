@@ -2,23 +2,12 @@
   @apply min-w-full;
 }
 
-.moj {
-  @apply my-4;
-}
-
 .heading {
   @apply text-center text-5xl text-white w-full;
 }
 
 .glass {
-  @apply flex p-10 pt-5 max-w-xl;
-}
-
-
-.extended-swiper {
-  @apply rounded-3xl;
-  width: 100%;
-  height: 100%;
+  @include glass;
 }
 
 

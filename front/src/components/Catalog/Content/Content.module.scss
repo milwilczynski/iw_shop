@@ -1,0 +1,13 @@
+﻿.content {
+  //@include glass;
+  min-height: 500px;
+  @apply rounded-b-3xl py-10;
+}
+
+.card {
+  @apply text-white p-2.5;
+}
+
+.card-body {
+
+}

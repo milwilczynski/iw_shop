@@ -4,7 +4,6 @@
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(237, 237, 237, 0.3);
-  height: 40%;
 }
 
 $screen-sm-min: 640px;
@@ -12,26 +11,44 @@ $screen-md-min: 768px;
 $screen-lg-min: 1024px;
 $screen-xl-min: 1280px;
 
-@mixin sm {
+@mixin sm-640 {
   @media (min-width: #{$screen-sm-min}) {
     @content;
   }
 }
 
-@mixin md {
+@mixin md-768 {
   @media (min-width: #{$screen-md-min}) {
     @content;
   }
 }
 
-@mixin lg {
+@mixin lg-1024 {
   @media (min-width: #{$screen-lg-min}) {
     @content;
   }
 }
 
-@mixin xl {
+@mixin xl-1280 {
   @media (min-width: #{$screen-xl-min}) {
     @content;
+  }
+}
+
+@mixin basic-padding($selector, $tailwind_default: 'w-full px-2.5', $tailwind_sm: 'px-5', $tailwind_lg: 'px-10') {
+  #{$selector} {
+    @apply #{$tailwind_default};
+  }
+
+  @include sm-640 {
+    #{$selector} {
+      @apply #{$tailwind_sm};
+    }
+  }
+
+  @include lg-1024 {
+    #{$selector} {
+      @apply #{$tailwind_lg};
+    }
   }
 }

@@ -4,9 +4,9 @@ import styles from './Brand.module.scss';
 interface BrandProps {}
 
 const Home: FC<PropsWithChildren<BrandProps>> = () => (
-  <div className="w-full flex items-center justify-center rounded-3xl p-20">
-    <div className={`text-9xl text-white ${styles.glass}`}>
-      <span>IW</span>
+  <div className={styles.container}>
+    <div className={styles.brand}>
+      <span className="text-9xl text-white" />
     </div>
   </div>
 );

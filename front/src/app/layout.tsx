@@ -5,8 +5,7 @@ import { Inter } from 'next/font/google';
 import './globals.scss';
 import Providers from '@/src/providers';
 import Navigation from '@/src/components/Navigation';
-import CommonLayout from '@/src/components/Layouts/CommonLayout';
-import Brand from '@/src/components/Sections/Brand';
+import BlurredLayout from '@/src/components/Layouts/BlurredLayout';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -41,10 +40,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Navigation />
-          <CommonLayout>
-            <Brand />
-            {children}
-          </CommonLayout>
+          <BlurredLayout>{children}</BlurredLayout>
         </Providers>
       </body>
     </html>

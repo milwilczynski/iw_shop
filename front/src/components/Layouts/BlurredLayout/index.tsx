@@ -1,11 +1,11 @@
 ﻿'use client';
 
 import React, { FC, PropsWithChildren } from 'react';
-import styles from './CommonLayout.module.scss';
+import styles from './BlurredLayout.module.scss';
 
-interface CommonLayoutProps {}
+interface BlurredLayoutProps {}
 
-const CommonLayout: FC<PropsWithChildren<CommonLayoutProps>> = ({
+const BlurredLayout: FC<PropsWithChildren<BlurredLayoutProps>> = ({
   children,
 }) => (
   <section>
@@ -20,4 +20,4 @@ const CommonLayout: FC<PropsWithChildren<CommonLayoutProps>> = ({
   </section>
 );
 
-export default CommonLayout;
+export default BlurredLayout;

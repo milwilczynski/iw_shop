@@ -1,0 +1,17 @@
+﻿@include basic-padding(".column-container");
+
+.column-container {
+  @apply w-full h-full;
+  display: grid;
+  grid-template-columns: var(--left-column-width) var(--right-column-width);
+  grid-template-rows: var(--rows);
+  grid-column-gap: var(--column-gap);
+
+  .left-column {
+
+  }
+
+  .right-column {
+
+  }
+}

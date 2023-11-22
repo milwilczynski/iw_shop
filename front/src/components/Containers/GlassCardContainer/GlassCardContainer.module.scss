@@ -1,0 +1,11 @@
+﻿@include basic-padding(".content");
+
+.content {
+  @apply w-full h-full;
+}
+
+.glass-content {
+  //@include glass;
+  @apply rounded-b-3xl border-t-0;
+}
+

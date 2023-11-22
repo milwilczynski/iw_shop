@@ -1,0 +1,77 @@
+﻿//TO TEN background: rgba(175,3,125,0.4); rgb(175 3 154 / 40%)
+.extended-swiper {
+  @apply rounded-3xl h-full w-full #{!important};
+  padding-bottom: 28px !important;
+
+  :global {
+    .swiper, .swiper-wrapper {
+      padding-bottom: 28px !important;
+    }
+
+    .swiper-slide {
+      @apply flex justify-center #{!important};
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    @include sm-640 {
+      .swiper-slide {
+        max-width: 100%;
+        min-width: 100%;
+      }
+    }
+
+    @include md-768 {
+      .swiper-slide {
+        max-width: 33% !important;
+        min-width: 245px;
+      }
+    }
+
+    @include lg-1024 {
+      .swiper-slide {
+        max-width: 33% !important;
+        min-width: 285px;
+      }
+    }
+
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      @apply rounded-3xl px-5 #{!important};
+      background: rgba(237, 237, 237, 0.04);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(237, 237, 237, 0.3);
+      color: #fff !important;
+      fill: #fff !important;
+      stroke: #fff !important;
+      min-width: 42px !important;
+
+      top: unset !important;
+      bottom: 2.5px !important;
+
+      &:before, &:after {
+        font-size: 16px !important;
+      }
+    }
+
+    .swiper-button-prev {
+      &:after {
+        margin-left: -3.5px;
+      }
+
+      left: calc(50% - 42px - 16px) !important;
+    }
+
+    .swiper-button-next {
+      &:after {
+        margin-left: 3.5px;
+      }
+
+      right: calc(50% - 42px - 16px) !important;
+    }
+  }
+}
+
+

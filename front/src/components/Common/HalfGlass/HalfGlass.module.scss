@@ -1,0 +1,48 @@
+﻿$glass-pb: 200px;
+
+.glass-container {
+  @apply flex flex-col w-full;
+}
+
+
+.glass-content {
+  @apply flex py-10 flex-col items-center;
+  background: rgb(175 3 154 / 100%);
+  padding-bottom: $glass-pb;
+}
+
+.content {
+  @apply relative flex w-full px-5;
+  margin-top: -#{$glass-pb};
+}
+
+.heading-container {
+  @apply flex flex-col w-fit;
+}
+
+.heading {
+  @apply relative flex text-center justify-center font-bold text-white text-5xl;
+  z-index: 1;
+}
+
+.ribbon {
+  @apply relative px-10 flex;
+  background: rgba(0, 0, 0, 0.1);
+  height: 60px;
+  width: 200%;
+  z-index: 0;
+  margin-top: -55px;
+  margin-left: -50%;
+}
+
+@include sm-640 {
+  .content {
+    @apply px-5;
+  }
+}
+
+@include lg-1024 {
+  .content {
+    @apply px-10;
+  }
+}

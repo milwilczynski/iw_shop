@@ -43,18 +43,20 @@ const Navigation: FC<PropsWithChildren<NavigationProps>> = () => {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <p className="font-bold text-inherit text-primary">IW</p>
+          <Link color="primary" href="/">
+            <p className="font-bold text-inherit text-primary">IW</p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="primary" href="#">
-            Features
+          <Link color="primary" href="/">
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" aria-current="page">
-            Customers
+          <Link color="primary" href="/catalog">
+            Catalog
           </Link>
         </NavbarItem>
         <NavbarItem>

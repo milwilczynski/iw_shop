@@ -1,0 +1,27 @@
+﻿.content {
+}
+
+.list {
+  @apply flex text-white;
+}
+
+.btn-group {
+  @apply w-full;
+
+  > button:first-child, button:last-child {
+    //@apply rounded-b-none;
+  }
+
+  > button:not(:last-child) {
+    //@apply border-r-2 border-solid border-secondary;
+  }
+}
+
+.btn {
+  width: 25%;
+  @include glass;
+  @apply py-8 #{!important};
+  @apply text-white text-lg;
+  background: rgba(255, 255, 255, 0.1);
+  //@apply bg-white;
+}

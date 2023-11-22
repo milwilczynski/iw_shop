@@ -1,0 +1,11 @@
+﻿@include sm-640 {
+  .basic-padding {
+    @apply px-5;
+  }
+}
+
+@include lg-1024 {
+  .basic-padding {
+    @apply px-10;
+  }
+}
