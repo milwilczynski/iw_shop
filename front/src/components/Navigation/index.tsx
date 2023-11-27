@@ -1,50 +1,56 @@
-﻿'use client';
+'use client';
 
 import React, { FC, PropsWithChildren } from 'react';
 import {
   Button,
+  Image,
   Link,
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
   NavbarMenuToggle,
 } from '@nextui-org/react';
 import styles from './Navigation.module.scss';
 
 interface NavigationProps {}
 
+const menuItems = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'Catalog',
+    href: '/catalog',
+  },
+];
 const Navigation: FC<PropsWithChildren<NavigationProps>> = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const menuItems = [
-    'Profile',
-    'Dashboard',
-    'Activity',
-    'Analytics',
-    'System',
-    'Deployments',
-    'My Settings',
-    'Team Settings',
-    'Help & Feedback',
-    'Log Out',
-  ];
+
   return (
     <Navbar
-      isBlurred
-      isBordered
       className={styles.navigation}
       position="sticky"
-      maxWidth="full"
+      maxWidth="2xl"
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent>
+      <NavbarContent justify="start" className="sm:hidden">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="sm:hidden"
+          className="text-primary"
         />
+      </NavbarContent>
+      <NavbarContent justify="start" className="sm:justify-center">
         <NavbarBrand>
-          <Link color="primary" href="/">
-            <p className="font-bold text-inherit text-primary">IW</p>
+          <Link color="primary" href="/" className="pt-2">
+            <Image
+              src="brand/logo_gradient.svg"
+              width="100%"
+              className="h-[40px]"
+            />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -60,7 +66,7 @@ const Navigation: FC<PropsWithChildren<NavigationProps>> = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#">Integrations</Link>
+          <Link href="/">Integrations</Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
@@ -70,6 +76,15 @@ const Navigation: FC<PropsWithChildren<NavigationProps>> = () => {
           </Button>
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link className="w-full" href={item.href} size="lg">
+              {item.name}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 };

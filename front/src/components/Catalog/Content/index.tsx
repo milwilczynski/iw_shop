@@ -1,7 +1,15 @@
-﻿'use client';
+'use client';
 
 import React, { FC, PropsWithChildren } from 'react';
-import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
+import {
+  Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Image,
+  Progress,
+} from '@nextui-org/react';
 import styles from './Content.module.scss';
 
 interface CatalogContentProps {}
@@ -10,7 +18,7 @@ const CatalogContent: FC<PropsWithChildren<CatalogContentProps>> = () => {
   const list = [
     {
       title: 'Orange',
-      img: 'https://nextui.org/images/fruit-1.jpeg',
+      img: '/gobelin.png',
       price: '$5.50',
     },
     {
@@ -51,31 +59,58 @@ const CatalogContent: FC<PropsWithChildren<CatalogContentProps>> = () => {
   ];
   return (
     <div className={styles.content}>
-      <div className="gap-5 grid grid-cols-1 sm:grid-cols-2">
+      <div className={styles.cardContainer}>
         {list.map((item, index) => (
           <Card
-            className={styles.card}
-            shadow="sm"
-            key={index}
             isPressable
-            onPress={() => console.log('item pressed')}
+            as="a"
+            href={`?${item.title}`}
+            radius="sm"
+            className={`${styles.card}`}
+            key={item.title}
+            shadow="sm"
           >
-            <CardBody className={`overflow-visible p-0 ${styles.cardBody}`}>
-              <Image
-                shadow="sm"
+            <CardFooter className={`justify-between ${styles.cardFooter}`}>
+              <p className="text-tiny text-white/80">Available soon.</p>
+              <Button
+                onClick={(event) => {
+                  event.preventDefault();
+                  console.log('item: ', item.title);
+                }}
+                className="text-tiny text-white bg-black/20"
+                variant="flat"
+                color="default"
                 radius="lg"
-                width="100%"
-                alt={item.title}
-                className="w-full object-cover h-[140px]"
-                src={item.img}
-              />
-            </CardBody>
-            <CardFooter
-              className={`text-small justify-between ${styles.cardFooter}`}
-            >
-              <b>{item.title}</b>
-              <p className="text-default-500">{item.price}</p>
+                size="sm"
+              >
+                Notify me
+              </Button>
             </CardFooter>
+            <CardHeader className={styles.cardHeader}>
+              <Image
+                isZoomed
+                isBlurred
+                radius="sm"
+                loading="lazy"
+                shadow="sm"
+                alt="Card background"
+                src={item.img}
+                width="100%"
+                className="object-cover"
+              />
+            </CardHeader>
+            <CardBody className={styles.cardBody}>
+              <h2 className="text-large font-bold text-default-500">
+                {item.title}
+              </h2>
+              <div className="flex flex-col">
+                <Progress aria-label="Rating" value={60} className="mt-1" />
+                <div className="flex w-full justify-end text-tiny text-default-500">
+                  Ponad 292 opinii
+                </div>
+              </div>
+              <div className="flex text-large text-primary">{item.price}</div>
+            </CardBody>
           </Card>
         ))}
       </div>

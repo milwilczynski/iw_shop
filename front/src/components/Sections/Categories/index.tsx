@@ -1,4 +1,4 @@
-﻿import React, { CSSProperties, FC, PropsWithChildren } from 'react';
+import React, { CSSProperties, FC, PropsWithChildren } from 'react';
 import StandardPaddingContainer from '@/src/components/Containers/StandardPaddingContainer';
 import styles from './Categories.module.scss';
 

@@ -1,4 +1,4 @@
-﻿import React, { CSSProperties, FC, PropsWithChildren } from 'react';
+import React, { CSSProperties, FC, PropsWithChildren } from 'react';
 import styles from './ColumnContainer.module.scss';
 
 interface ColumnContainerProps {

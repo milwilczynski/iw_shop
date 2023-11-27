@@ -1,7 +1,7 @@
 ﻿.ribbon {
   @apply w-full flex py-10 flex-col items-center justify-center;
-  min-height: 100px;
-  background: rgba(175, 3, 154, 0.35);
+  min-height: 150px;
+  background: rgba(175, 3, 154);
 
   h2 {
     @apply text-white font-bold text-5xl text-center;

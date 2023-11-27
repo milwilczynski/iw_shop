@@ -1,4 +1,4 @@
-﻿import React, { FC, PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import styles from './HalfGlass.module.scss';
 
 interface HalfGlassProps {

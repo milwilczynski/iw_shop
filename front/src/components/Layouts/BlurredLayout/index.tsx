@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { FC, PropsWithChildren } from 'react';
 import styles from './BlurredLayout.module.scss';

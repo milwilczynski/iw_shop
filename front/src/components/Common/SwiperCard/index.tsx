@@ -1,21 +1,24 @@
-﻿import React, { FC, PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { Card, CardBody, CardHeader, Image, Progress } from '@nextui-org/react';
 import styles from './SwiperCard.module.scss';
 
 interface SwiperCardProps {}
 
 const SwiperCard: FC<PropsWithChildren<SwiperCardProps>> = () => (
-  <Card isPressable isHoverable className={`${styles.card}`} shadow="sm">
-    <CardHeader className="pb-0 pt-2 px-4 flex-col items-center">
+  <Card isPressable className={`${styles.card}`} shadow="sm">
+    <CardHeader className={styles.cardHeader}>
       <Image
         isZoomed
+        radius="sm"
+        loading="lazy"
+        shadow="sm"
         alt="Card background"
-        className="object-cover rounded-xl"
         src="https://nextui.org/images/hero-card-complete.jpeg"
-        width={270}
+        width="100%"
+        className="object-cover"
       />
     </CardHeader>
-    <CardBody className="overflow-visible py-2 text-primary">
+    <CardBody className={styles.cardBody}>
       <h2 className="text-large font-bold text-default-500">
         Dziewczyna z zapałkami
       </h2>

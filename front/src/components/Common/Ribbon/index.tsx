@@ -1,4 +1,4 @@
-﻿import React, { FC, PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import styles from './Ribbon.module.scss';
 
 interface RibbonProps {

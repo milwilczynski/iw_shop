@@ -1,3 +1,31 @@
 ﻿.card {
-  @apply flex p-10 pt-5 max-w-lg;
+  // @apply flex flex-col border-solid border-5 border-white;
+  //@include glass;
+  //@apply p-4;
+  //@apply border-2;
+  min-height: 250px;
+  //@apply bg-transparent;
+  //background: rgba(255, 255, 255, 1);
+  @apply text-primary;
+}
+
+.card {
+  min-height: 250px;
+  @apply text-primary bg-transparent flex-col flex flex-grow;
+}
+
+.card-header {
+  @include glass;
+  @apply flex flex-col items-center p-3;
+  flex-grow: 2;
+
+  div {
+    display: flex;
+    height: 100%;
+  }
+}
+
+.card-body {
+  @apply flex overflow-visible text-primary p-5 bg-white;
+  flex-basis: 50px;
 }

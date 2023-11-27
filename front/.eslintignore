@@ -5,3 +5,5 @@ tailwind.config.js
 .prettierrc
 next.config.js
 postcss.config.js
+.eslintrc.js
+i18n.js

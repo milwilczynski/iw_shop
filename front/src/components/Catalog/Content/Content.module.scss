@@ -1,13 +1,36 @@
 ﻿.content {
-  //@include glass;
   min-height: 500px;
-  @apply rounded-b-3xl py-10;
+
+  @apply bg-transparent rounded-b-3xl py-10 border-t-0;
+}
+
+.card-container {
+  @apply gap-y-6 gap-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4;
 }
 
 .card {
-  @apply text-white p-2.5;
+  min-height: 150px;
+  @apply text-primary bg-transparent flex-col flex flex-grow;
+}
+
+.card-footer {
+  @include glass;
+  background: rgba(255, 255, 255, 0.25);
+  @apply rounded-b-none;
+}
+
+.card-header {
+  @include glass;
+  @apply flex flex-col items-center p-3 rounded-t-none border-t-0;
+  flex-grow: 80;
+
+  div {
+    display: flex;
+    height: 100%;
+  }
 }
 
 .card-body {
-
+  @apply flex overflow-visible text-primary p-3 bg-white;
+  flex-basis: 50px;
 }

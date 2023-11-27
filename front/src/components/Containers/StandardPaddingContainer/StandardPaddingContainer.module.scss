@@ -1,15 +1,1 @@
-﻿.container-padding {
-  @apply w-full px-2.5;
-}
-
-@include sm-640 {
-  .container-padding {
-    @apply px-10;
-  }
-}
-
-@include lg-1024 {
-  .container-padding {
-    @apply px-20;
-  }
-}
+﻿@include basic-padding('.container-padding');

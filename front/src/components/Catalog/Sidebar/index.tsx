@@ -1,4 +1,4 @@
-﻿import React, { FC, PropsWithChildren } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { Button, ButtonGroup } from '@nextui-org/react';
 import styles from './Sidebar.module.scss';
 

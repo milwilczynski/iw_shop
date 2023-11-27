@@ -4,10 +4,9 @@
   @apply flex flex-col w-full;
 }
 
-
 .glass-content {
   @apply flex py-10 flex-col items-center;
-  background: rgb(175 3 154 / 100%);
+  background: rgba(175, 3, 154);
   padding-bottom: $glass-pb;
 }
 

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { FC, PropsWithChildren } from 'react';
 import HalfGlass from '@/src/components/Common/HalfGlass';
@@ -14,22 +14,20 @@ import styles from './Products.module.scss';
 interface ProductsProps {}
 
 const Products: FC<PropsWithChildren<ProductsProps>> = () => (
-  <>
+  <div className="w-full">
     <Brand />
-    <div className={`w-full ${styles.glass}`}>
-      <Categories classes="container-padding" />
-      <HalfGlass heading={"Meet this week bestseller's!"}>
-        <div className={styles.products}>
-          <div className="flex w-full mt-6 text-primary font-bold flex-col">
-            <div className="flex flex-col overflow-visible">
-              <InternalSwiper />
-            </div>
+    <Categories classes="container-padding" />
+    <HalfGlass heading={"Meet this week bestseller's!"}>
+      <div className={styles.products}>
+        <div className="flex w-full mt-6 text-primary font-bold flex-col">
+          <div className="flex flex-col overflow-visible">
+            <InternalSwiper />
           </div>
         </div>
-      </HalfGlass>
-      <Categories style={{ marginTop: '20px' }} />
-    </div>
-  </>
+      </div>
+    </HalfGlass>
+    <Categories style={{ marginTop: '20px' }} />
+  </div>
 );
 
 export default Products;

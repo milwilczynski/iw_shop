@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
@@ -7,7 +7,7 @@ import {
   Navigation,
   Pagination,
 } from 'swiper/modules';
-import React, { FC, PropsWithChildren, useMemo } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -17,58 +17,53 @@ import styles from './InternalSwiper.module.scss';
 
 interface InternalSwiperProps {}
 
-const InternalSwiper: FC<PropsWithChildren<InternalSwiperProps>> = ({
-  children,
-}) => {
-  const arrChildren = useMemo(
-    () => React.Children.toArray(children),
-    [children],
-  );
+const InternalSwiper: FC<PropsWithChildren<InternalSwiperProps>> = ({}) => (
+  // const arrChildren = useMemo(
+  //   () => React.Children.toArray(children),
+  //   [children],
+  // );
 
-  return (
-    <Swiper
-      effect="coverflow"
-      initialSlide={1}
-      centeredSlides
-      navigation
-      loop
-      spaceBetween={30}
-      slidesPerView="auto"
-      coverflowEffect={{
-        rotate: -15,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: false,
-      }}
-      autoplay={{
-        delay: 5000,
-        pauseOnMouseEnter: true,
-        waitForTransition: true,
-      }}
-      modules={[Navigation, EffectCoverflow, Pagination, Autoplay]}
-      className={styles.extendedSwiper}
-    >
-      <SwiperSlide>
-        <SwiperCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperCard />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SwiperCard />
-      </SwiperSlide>
-      {/* {arrChildren.map((child, index) => ( */}
-      {/*  <SwiperSlide key={index}>{child}</SwiperSlide> */}
-      {/* ))} */}
-    </Swiper>
-  );
-};
-
+  <Swiper
+    effect="coverflow"
+    initialSlide={1}
+    centeredSlides
+    navigation
+    loop
+    spaceBetween={30}
+    slidesPerView="auto"
+    coverflowEffect={{
+      rotate: -15,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    }}
+    autoplay={{
+      delay: 5000,
+      pauseOnMouseEnter: true,
+      waitForTransition: true,
+    }}
+    modules={[Navigation, EffectCoverflow, Pagination, Autoplay]}
+    className={styles.extendedSwiper}
+  >
+    <SwiperSlide>
+      <SwiperCard />
+    </SwiperSlide>
+    <SwiperSlide>
+      <SwiperCard />
+    </SwiperSlide>
+    <SwiperSlide>
+      <SwiperCard />
+    </SwiperSlide>
+    <SwiperSlide>
+      <SwiperCard />
+    </SwiperSlide>
+    <SwiperSlide>
+      <SwiperCard />
+    </SwiperSlide>
+    {/* {arrChildren.map((child, index) => ( */}
+    {/*  <SwiperSlide key={index}>{child}</SwiperSlide> */}
+    {/* ))} */}
+  </Swiper>
+);
 export default InternalSwiper;
