@@ -12,7 +12,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import SwiperCard from '@/src/components/Common/SwiperCard';
+import ProductCard from '@/src/components/Common/Cards/ProductCard';
 import styles from './InternalSwiper.module.scss';
 
 interface InternalSwiperProps {}
@@ -47,19 +47,39 @@ const InternalSwiper: FC<PropsWithChildren<InternalSwiperProps>> = ({}) => (
     className={styles.extendedSwiper}
   >
     <SwiperSlide>
-      <SwiperCard />
+      <ProductCard
+        img="https://nextui.org/images/hero-card-complete.jpeg"
+        title="Dziewka"
+        price="€39.99"
+      />
     </SwiperSlide>
     <SwiperSlide>
-      <SwiperCard />
+      <ProductCard
+        img="https://nextui.org/images/hero-card-complete.jpeg"
+        title="Dziewka"
+        price="€39.99"
+      />
     </SwiperSlide>
     <SwiperSlide>
-      <SwiperCard />
+      <ProductCard
+        img="https://nextui.org/images/hero-card-complete.jpeg"
+        title="Dziewka"
+        price="€39.99"
+      />
     </SwiperSlide>
     <SwiperSlide>
-      <SwiperCard />
+      <ProductCard
+        img="https://nextui.org/images/hero-card-complete.jpeg"
+        title="Dziewka"
+        price="€39.99"
+      />
     </SwiperSlide>
     <SwiperSlide>
-      <SwiperCard />
+      <ProductCard
+        img="https://nextui.org/images/hero-card-complete.jpeg"
+        title="Dziewka"
+        price="€39.99"
+      />
     </SwiperSlide>
     {/* {arrChildren.map((child, index) => ( */}
     {/*  <SwiperSlide key={index}>{child}</SwiperSlide> */}

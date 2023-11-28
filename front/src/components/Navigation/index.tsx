@@ -34,6 +34,7 @@ const Navigation: FC<PropsWithChildren<NavigationProps>> = () => {
     <Navbar
       className={styles.navigation}
       position="sticky"
+      isBordered
       maxWidth="2xl"
       onMenuOpenChange={setIsMenuOpen}
     >

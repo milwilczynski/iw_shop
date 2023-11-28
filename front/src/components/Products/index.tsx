@@ -14,20 +14,22 @@ import styles from './Products.module.scss';
 interface ProductsProps {}
 
 const Products: FC<PropsWithChildren<ProductsProps>> = () => (
-  <div className="w-full">
+  <>
     <Brand />
-    <Categories classes="container-padding" />
-    <HalfGlass heading={"Meet this week bestseller's!"}>
-      <div className={styles.products}>
-        <div className="flex w-full mt-6 text-primary font-bold flex-col">
-          <div className="flex flex-col overflow-visible">
-            <InternalSwiper />
+    <div className="w-full">
+      <Categories classes="container-padding" />
+      <HalfGlass heading={"Meet this week bestseller's!"}>
+        <div className={styles.products}>
+          <div className="flex w-full mt-6 text-primary font-bold flex-col">
+            <div className="flex flex-col overflow-visible">
+              <InternalSwiper />
+            </div>
           </div>
         </div>
-      </div>
-    </HalfGlass>
-    <Categories style={{ marginTop: '20px' }} />
-  </div>
+      </HalfGlass>
+      <Categories style={{ marginTop: '20px' }} />
+    </div>
+  </>
 );
 
 export default Products;

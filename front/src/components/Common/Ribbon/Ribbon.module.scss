@@ -1,9 +1,11 @@
 ﻿.ribbon {
-  @apply w-full flex py-10 flex-col items-center justify-center;
-  min-height: 150px;
-  background: rgba(175, 3, 154);
+  @apply w-full flex py-10 flex-col items-center justify-center bg-white;
+  min-height: 250px;
 
   h2 {
-    @apply text-white font-bold text-5xl text-center;
+    @apply text-white font-bold text-8xl text-center;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

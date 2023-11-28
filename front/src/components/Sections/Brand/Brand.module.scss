@@ -1,8 +1,12 @@
-﻿@include basic-padding('.container');
+﻿//@include basic-padding('.container');
 .container {
-  @apply flex;
+  @apply flex flex-col;
 }
 
 .brand {
-  @apply w-full items-center justify-center rounded-3xl 2xl:h-[450px];
+  @apply flex w-full items-center justify-center 2xl:h-[450px] bg-white;
+
+  div {
+    @apply flex items-center justify-center w-full h-full pt-10 pl-20;
+  }
 }

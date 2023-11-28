@@ -1,0 +1,34 @@
+﻿.card {
+  min-height: 150px;
+  @apply text-primary bg-transparent flex-col flex flex-grow;
+}
+
+.button {
+  @apply border-0 border-white text-white min-w-0 bg-transparent;
+
+  span {
+    @apply border-0 #{!important};
+  }
+}
+
+.card-footer {
+  @include glass;
+  background: rgba(255, 255, 255, 0.25);
+  @apply rounded-b-none py-3 px-1;
+}
+
+.card-header {
+  @include glass;
+  @apply flex flex-col items-center p-3 rounded-t-none border-t-0;
+  flex-grow: 80;
+
+  div {
+    display: flex;
+    height: 100%;
+  }
+}
+
+.card-body {
+  @apply flex overflow-visible text-primary p-3 bg-white;
+  flex-basis: 50px;
+}
